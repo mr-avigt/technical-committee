@@ -1554,3 +1554,627 @@ h2 {
     color: #fff;
     letter-spacing: 5px; 
 }
+
+/* homepage  */
+
+
+@keyframes go{
+    from{ 
+        transform: translateX(-50%) ;opacity: 0;
+    }
+    to{
+        transform: translateX(0%); opacity: 1;
+    }
+}
+@keyframes go-away{
+    from{
+        transform: translateX(0%); opacity: 1;
+    }
+    to{
+        transform: translateX(-110%); opacity: 0;
+    }
+}
+@keyframes slide_in_left{
+    0%{
+        transform: translateX(-49%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes slide_in_right{
+    0%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(-1%);
+    }
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(3%);
+    }
+    50%{
+        transform:translateY(-3%);
+    }
+    100%{
+        transform:translateY(3%)
+
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+ @keyframes spins {
+    
+ }
+
+/* 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    overflow-x: hidden;
+    display: flex;
+} */
+.header{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    z-index: 10;
+}
+.navbar{
+    position: fixed;
+    width: 90%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: 3px solid #949494;
+    border-radius: 100px;
+    z-index: 10;
+    
+}
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0); 
+    backdrop-filter: blur(0px);
+  }
+.nav_elements{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
+    text-decoration: none;
+    border: 2px;
+    border-radius: 4px;
+}
+#nav_element1:hover,#nav_element2:hover,#nav_element3:hover,#nav_element4:hover,#nav_element5:hover,#nav_element6:hover{
+    background-color: ;
+    zoom: 110%  ; 
+    box-shadow: 0px 0px  30px rgb(0, 128, 13);
+
+}
+#nav_element1,#nav_element2,#nav_element3,#nav_element4,#nav_element5,#nav_element6{
+    margin-top: 0%;
+    margin-right: 2%;
+    margin-right: 2%;
+}
+#logo{
+    width: 13%;
+    margin: 10px;
+}
+.bg{
+    position: relative;
+    top: 20vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+.aadhacircle img{
+    width: 70%;
+    position: relative;
+    top: 0vh;
+}
+.aadhacircle{
+    width: 30%;
+    position: relative;
+    top: 32vh;
+}
+.bouncing_graphics{
+    display: flex;
+    position: relative;
+    top: 10vh;
+    left: vw;
+    width: 70%;
+}
+.circle{
+    width: 55%;
+    scale: 1.4;
+    position: relative;
+    top:0vh ;
+    left:2vw ;
+    animation: spin 12s infinite ease-in;
+}
+.ultron{
+    align-items: right;
+    justify-content: center;
+    position: relative;
+    left: -40%;
+    top: -80%;
+    opacity: 0.7;
+    max-width: 100%;
+}
+
+.dr_strange1{
+    width: 75%;
+    z-index: 1;
+    scale: 1.5;
+    position: relative;
+    left: -43.5vw;
+    top: -3vh;
+    animation: bounce 4s infinite ease-in-out;
+}
+.badal img{
+    z-index: 200;
+    position: relative;
+    top: -6vh;
+    left: 0vw;
+    width: 140%;
+}
+.badal{
+    max-width: fit-content;
+    max-height: fit-content;
+}
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0vh;
+    width: 30%;
+    height: 90vh;
+    background-color: grey;
+    opacity: 0;
+    transform: translateX(-110%);
+}
+.mobile_nav_elements{
+    text-decoration: none;
+    fonts-size: ;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 4px;
+    color: black;
+}
+.mobile_nav_elements:active{
+    background-color: black;
+    zoom: 120%;
+    color: white;
+}
+.mobile-menu.show {
+    transform: translateX(0);
+    opacity: 1;
+    animation: go 0.5s ease-in-out forwards ; 
+  }
+  .mobile-menu.show-out {
+    animation: go-away  0.5s ease-in-out forwards ;
+  }
+@media (max-width:2700px){
+    .mobile-menu{
+        visibility: hidden;
+        height: 0%;
+    }
+    .mobile_nav_elements{
+        visibility: hidden;
+        height: 0%;
+    }
+    .button{
+        visibility: hidden;
+        height: 0%;
+    }
+
+    .navbar{
+
+    }
+    .nav_elements{
+        font-size: 200%;
+    }
+    #logo{
+        width: 14%;
+    }
+    .aadhacircle img{
+        width: 79%;
+        
+    }
+    .badal img{
+        width: 203%;
+        left: -60%;
+        top: -16vh;
+    }
+    .dr_strange1{
+        position: relative;
+        left: -62%;
+    }
+   
+    .bouncing_graphics{
+        left: -9vh;
+        top: -15vh;
+        scale: 1.1;
+    }
+
+    .aadhacircle{
+        top: 30vh;
+        left: -16%;
+    }
+    .ultron{
+        left: -90vh;
+        top: -30vh;
+    }
+}
+
+@media (max-width:1500px){
+    .mobile-menu{
+        visibility: hidden;
+        height: 0%;
+    }
+    
+    .mobile_nav_elements{
+        visibility: hidden;
+        height: 0%;
+    }
+    .button{
+        visibility: hidden;
+        height: 0%;
+    }
+    .navbar{
+
+    }
+    .nav_elements{
+        font-size: 350%;
+    }
+    #logo{
+        width: 14%;
+    }
+   .bouncing_graphics{
+    scale: 1.5;
+    left: 140vh;
+    top: 49vh;
+   }
+
+   .ultron{
+    top: 90%;
+   }
+
+   .badal img{
+    width: 250vh;
+    left:107vh;
+    top: 114vh;
+    scale: 2.8;
+   }
+   .aadhacircle img{
+    scale: 1.7;
+    top: 50vh;
+   }
+}
+
+
+
+@media (max-width:1024px){
+    .mobile-menu{
+        visibility: hidden;
+        height: 0%;
+    }
+    
+    .mobile_nav_elements{
+        visibility: hidden;
+        height: 0%;
+    }
+    .button{
+        visibility: hidden;
+        height: 0%;
+    }
+    .navbar{
+
+    }
+    .nav_elements{
+
+    }
+    #logo{
+
+    }
+    .bouncing_graphics{
+        scale: 2.4;
+        top: 100vh;
+        left: 80vh;
+    }
+    .badal{
+        scale: 1.1; 
+    }
+
+    .dr_strange1{
+        left: -80vh;
+    }
+    .circle{
+        left: 40vh;
+    }
+    .badal img{
+        top: 160vh;
+        left: 160vh;
+    }
+    .ultron{
+        left: -110vh;
+    }
+}
+
+@media (max-width:768px){
+    .mobile-menu{
+        visibility: hidden;
+        height: 0%;
+    }
+    
+    .mobile_nav_elements{
+        visibility: hidden;
+        height: 0%;
+    }
+    .button{
+        visibility: hidden;
+        height: 0%;
+    }
+    .navbar{
+
+    }
+    .nav_elements{
+        font-size: 350%;
+
+    }
+    #logo{
+        width: 24%;
+
+    }
+    .bouncing_graphics{
+        scale: 1.6;
+        left: 34vh;
+    }
+    .aadhacircle{
+        top: 120vh;
+    }
+    .ultron{
+        top: -60vh;
+        left: -90vh;
+    }
+}
+
+@media (max-width:650px){
+    .mobile-menu{
+        visibility: hidden;
+        height: 0%;
+    }
+    .button{
+        visibility: hidden;
+        height: 0%;
+    }
+    
+    .mobile_nav_elements{
+        visibility: hidden;
+        height: 0%;
+    }
+    .navbar{
+
+    }
+    .nav_elements{
+        font-size: 260%;
+
+    }
+    #logo{
+        width: 30%;
+    }
+    .bouncing_graphics{
+        scale: 1.7;
+        left: 14vh;
+    }
+    .badal{
+        scale: 1.7;
+    }
+}
+@media (max-width:460px){
+   
+    .navbar{
+        border: hidden;
+        width: 50%;
+
+    }
+    #nav_element1,#nav_element2,#nav_element3,#nav_element4,#nav_element5,#nav_element6{
+        visibility: hidden;
+        height: 0;  
+        font-size: 0%;
+    }
+    #logo{
+        width: 88%;
+
+    }
+    .aadhacircle img{
+        top: -67vh;
+        width: 188%;
+    }
+    .badal img{
+        top: -88vh;
+        left: 0vw;
+    }
+    .mobile-menu{
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 0vh;
+        width: 60%;
+        height: 90vh;
+        background-color: black;
+        opacity: 0;
+        transform: translateX(-110%);
+        z-index: -99;
+    }
+    .button{
+        visibility: visible;
+        background-color: transparent;
+        border: none;
+    }
+    .button svg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+        border-radius: 5px;
+        visibility: visible;
+        position: relative;
+        top: 12vh;
+        left: 10vh;
+        scale: 2;
+    }
+    .mobile_nav_elements{
+        visibility: visible;
+        text-decoration: none;
+        fonts-size: ;
+        padding: 2vh;
+        margin: 2vh;
+        border-radius: 4px;
+        color: white;
+    }
+    .mobile_nav_elements:active{
+        background-color: black;
+        zoom: 120%;
+        color: red;
+        z-index: 99;
+    }
+    .mobile-menu.show {
+        z-index: 99;
+        transform: translateX(0);
+        opacity: 1;
+        animation: go 0.5s ease-in-out forwards ;
+      }
+      .mobile-menu.show-out {
+        animation: go-away  0.5s ease-in-out forwards ;
+      }
+}
+
+@media (max-width:420px){
+   
+    .navbar{
+        border: hidden;
+        width: 50%;
+
+    }
+    #nav_element1,#nav_element2,#nav_element3,#nav_element4,#nav_element5,#nav_element6{
+        visibility: hidden;
+        height: 0;  
+        font-size: 0%;
+    }
+    #logo{
+        width: 88%;
+
+    }
+    .aadhacircle {
+        top: -102vh;
+        /*width: 188%;*/
+    }
+    
+    .aadhacircle img{
+        top: 24vh;
+        width: 203%;
+    }
+    .bouncing_graphics{
+        width: 70%;
+        top: -92vh;
+        left: 32vw;
+    }
+    .circle{
+        width: 197%;
+        top: 0vh;
+        left: 0vw;
+    }
+    .dr_strange1{
+        width: 230%;
+        top: -3vh;
+        left:-151vw ;
+
+    }
+    
+    .badal img{
+        top: -112vh;
+        left: 0vw;
+    }
+    .mobile-menu{
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 0vh;
+        width: 70%;
+        height: 90vh;
+        background-color: grey;
+        opacity: 0;
+        transform: translateX(-110%);
+        z-index: -99;
+    }
+    .button svg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+        border-radius: 5px;
+        visibility: visible;
+        position: relative;
+        top: 12vh;
+        left: 10vh;
+        scale: 2;
+    }
+    .button{
+        background-color: transparent;
+        border: none;
+    }
+    .mobile_nav_elements{
+        visibility: visible;
+        text-decoration: none;
+        fonts-size: ;
+        padding: 2vh;
+        margin: 2vh;
+        border-radius: 4px;
+        color: black;
+    }
+    .mobile_nav_elements:active{
+        background-color: black;
+        zoom: 120%;
+        color: white;
+        z-index: 99;
+    }
+    .mobile-menu.show {
+        z-index: 99;
+        transform: translateX(0);
+        opacity: 1;
+        animation: go 0.5s ease-in-out forwards ; 
+      }
+      .mobile-menu.show-out {
+        animation: go-away  0.5s ease-in-out forwards ;
+      }
+}
+
