@@ -140,5 +140,34 @@ button.addEventListener("click", toggleMenu);
 elements.forEach(element => {
   element.addEventListener("click" ,toggleMenu );
 });
+// about us page script//
+document.addEventListener("DOMContentLoaded", function () {
+    var aboutSection = document.querySelector('.about');
+    var aboutPara = document.querySelector('.about_para');
+    var imgPara = document.querySelector('.about');
+    var aboutheading= document.querySelector('.about_heading');
 
+    var options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
 
+    var observer = new IntersectionObserver(handleIntersect, options);
+
+    observer.observe(aboutSection);
+
+    function handleIntersect(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                aboutPara.classList.add('slide-in-right');
+                imgPara.classList.add('fade-in');
+                aboutheading.classList.add('growin');
+            } else {
+                aboutPara.classList.remove('slide-in-right');
+                imgPara.classList.remove('fade-in');
+                aboutheading.classList.remove('growin');
+            }
+        });
+    }
+});
