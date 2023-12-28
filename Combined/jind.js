@@ -46,7 +46,6 @@ tl
 })
 
 
-// 3rd Page
 
 // Countdown
 $(window).load(function(){
