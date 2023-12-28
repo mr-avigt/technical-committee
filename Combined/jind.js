@@ -1,3 +1,5 @@
+// Events page
+
 const cardBunch = document.querySelectorAll(".card__inner");
 
 
@@ -9,7 +11,7 @@ cardBunch.forEach(function (card){
 
 
 
-// 2nd---page
+// Gallery---page
 
 var tl = gsap.timeline({scrollTrigger:{
     trigger:"#main-gallery",
