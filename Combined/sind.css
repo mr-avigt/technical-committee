@@ -544,7 +544,7 @@ img {
   height: auto;
 }
 
-body {
+.countdown {
 	background: #fff;
 	color: #666666;
 	font-family: 'dragon', sans-serif;
